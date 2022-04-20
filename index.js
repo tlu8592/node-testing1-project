@@ -14,7 +14,7 @@ function trimProperties(obj) {
   }
   return result
 }
-console.log(trimProperties({ name: '    jane    '}))
+// console.log(trimProperties({ name: '    jane    '}))
 
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
@@ -26,6 +26,10 @@ console.log(trimProperties({ name: '    jane    '}))
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (let prop in obj) {
+    obj[prop] = obj[prop].trim()
+  }
+  return obj
 }
 
 /**
